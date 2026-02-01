@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 16px;
+    background: #f5f5f5;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-box label,
+.per-page label {
+    margin-right: 8px;
+    color: #555;
+}
+
+.search-box input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+.sort-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-buttons span {
+    color: #555;
+    margin-right: 4px;
+}
+
+.sort-buttons button,
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.sort-buttons button:hover,
+.pagination button:not(:disabled):hover {
+    background: #eee;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.per-page select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.error {
+    padding: 12px;
+    background: #fee;
+    color: #c00;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.products-table thead tr {
+    background: #333;
+    color: #fff;
+}
+
+/* 1 dòng đen, 1 dòng trắng */
+.products-table tbody tr:nth-child(odd) {
+    background: #000;
+    color: #fff;
+}
+
+.products-table tbody tr:nth-child(even) {
+    background: #fff;
+    color: #000;
+}
+
+.products-table tbody tr:nth-child(odd) a {
+    color: #8cf;
+}
+
+.products-table tbody tr:nth-child(even) a {
+    color: #06c;
+}
+
+/* Cột hình ảnh - hiển thị toàn bộ hình (full image) */
+.img-cell {
+    width: 120px;
+    min-width: 120px;
+    padding: 8px !important;
+    vertical-align: middle;
+}
+
+.img-cell img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-info {
+    margin-left: 12px;
+    color: #666;
+    font-size: 0.9rem;
+}

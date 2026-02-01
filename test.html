@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Dashboard Sản phẩm</h1>
+
+        <div class="controls">
+            <div class="search-box">
+                <label for="search">Tìm theo title:</label>
+                <input type="text" id="search" placeholder="Nhập title để tìm...">
+            </div>
+
+            <div class="sort-buttons">
+                <span>Sắp xếp:</span>
+                <button type="button" id="sort-price-asc">Giá tăng dần</button>
+                <button type="button" id="sort-price-desc">Giá giảm dần</button>
+                <button type="button" id="sort-title-asc">Tên A → Z</button>
+                <button type="button" id="sort-title-desc">Tên Z → A</button>
+            </div>
+
+            <div class="per-page">
+                <label for="perPage">Hiển thị mỗi trang:</label>
+                <select id="perPage">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">Đang tải...</div>
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div class="table-wrap">
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hình ảnh</th>
+                        <th>Title</th>
+                        <th>Giá</th>
+                        <th>Danh mục</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
